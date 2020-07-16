@@ -12,6 +12,7 @@
     "discord.js": "^12.2.0",
     "ms": "^2.1.2",
     "nodemon": "^2.0.4",
+    "request-promise-native": "^1.0.8",
     "save": "^2.4.0",
     "snekfetch": "^4.0.4",
     "weather-js": "^2.0.0"
