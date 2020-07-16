@@ -43,7 +43,7 @@ client.on('messageDelete', message => {
     if (!message.guild.me) return;
 
     if (!message.partial) {
-        const logChannel = client.channels.cache.get('700265762174009384');
+        const logChannel = client.channels.cache.get('705329104165011517');
         if (logChannel) {
             var embed = new discord.MessageEmbed()
                 .setTitle('Deleted Message')
@@ -60,7 +60,7 @@ client.on('messageDelete', message => {
 
 
 client.on('messageUpdate', async (oldMessage, newMessage) => {
-    const logChannel = client.channels.cache.get('700265762174009384');
+    const logChannel = client.channels.cache.get('705329104165011517');
 
     if (!oldMessage.guild.me) return;
 
@@ -81,51 +81,6 @@ client.on('messageUpdate', async (oldMessage, newMessage) => {
 });
 //log
 
-client.on("guildMemberAdd", member => {
-
-    var role = member.guild.roles.cache.get('625462119940227103');
-
-    if (!role) return;
-
-    if (member.user.bot) return;
-
-    member.roles.add(role);
-
-    var channel = member.guild.channels.cache.get('575107491873161229');
-
-    if (!channel) return;
-
-    //channel.send(`Welcome to ATFO ${member}!`);
-
-    var joinEmbed = new discord.MessageEmbed()
-        .setAuthor(`${member.user.tag}`, member.user.displayAvatarURL)
-        .setDescription(`Welcome ${member.user.username}, to ATFO!`)
-        .setColor("#00ff00")
-        .setFooter("Member joined")
-        .setTimestamp();
-
-    channel.send(joinEmbed);
-
-
-})
-
-
-client.on("guildMemberRemove", member => {
-    var channel = member.guild.channels.cache.get('622513188809736193');
-
-    if (!channel) return;
-
-
-    var leaveEmbed = new discord.MessageEmbed()
-        .setAuthor(`${member.user.tag}`, member.user.displayAvatarURL)
-        .setColor("#ff0000")
-        .setFooter("Member left")
-        .setTimestamp();
-
-    channel.send(leaveEmbed);
-
-
-})
 
 
 
